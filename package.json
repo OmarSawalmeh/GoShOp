@@ -1,0 +1,20 @@
+{
+  "name": "goshop",
+  "version": "1.0.0",
+  "description": "Full Stack Application with MongoDB, Express, React and NodeJS (MERN Stack)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarSawalmeh/GoShOp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmarSawalmeh/GoShOp/issues"
+  },
+  "homepage": "https://github.com/OmarSawalmeh/GoShOp#readme"
+}
