@@ -1,12 +1,12 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {Container} from 'react-bootstrap'
 
 // components
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-// screen
+// screen // pages
 import HomeScreen from './screen/HomeScreen'
 import ProductScreen from './screen/ProductScreen'
 
