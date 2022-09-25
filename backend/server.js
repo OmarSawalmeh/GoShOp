@@ -1,16 +1,18 @@
 'use strict'
-
 import express from 'express'
 import dotenv from 'dotenv'
+// DATABASE
 import connectDB from './config/db.js'
+// ROUTERS
 import productRoutes from './routes/productRoutes.js'
+import userRoutes from './routes/userRoute.js'
+// MIDDLEWARE
 import { notFound, errorHandler} from './middleware/errorMiddleware.js'
 
 dotenv.config()
-
 connectDB()
-
 const app = express()
+app.use(express.json())
 
 
 app.get('/', (req, res)=>{
@@ -19,6 +21,7 @@ app.get('/', (req, res)=>{
 
 // Routes
 app.use('/api/products', productRoutes)
+app.use('/api/users', userRoutes)
 
 // Middleware
 app.use(notFound)
