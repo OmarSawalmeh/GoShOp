@@ -9,7 +9,6 @@ Full Stack Application with MongoDB, Express, React and NodeJS (MERN Stack)
    "client": "npm start --prefix frontend",
    "dev": "concurrently \"npm run server\" \"npm run client\"",
    // npm i concurrently
-
    ```
    - `npm run server` to run server.
    - `npm run client` to run frontend.
@@ -25,18 +24,33 @@ Full Stack Application with MongoDB, Express, React and NodeJS (MERN Stack)
          > Add ''user._id'' to each product to Connect between products and user 
        ---
    - **Routes :**
-      - Get All Products 
-         -  @desc     Fetch all products
-         -  @route    GET `/api/products`
-         -  @access   Public
-      - Get Single Products    
-         -  @desc     Fetch single product
-         -  @route    GET `/api/products/:id`
-         -  @access   Public
+      - Product Route :
+         - Get All Products 
+            -  @desc     Fetch all products
+            -  @route    GET `/api/products`
+            -  @access   Public
+         - Get Single Products    
+            -  @desc     Fetch single product
+            -  @route    GET `/api/products/:id`
+            -  @access   Public
+      - User Route :
+         - Login ( Auth user & get token ) 
+            -  @desc     Auth user & get token
+            -  @route    POST `/api/users/login`
+            -  @access   Public
+         - Register a new user    
+            -  @desc     Fetch single product
+            -  @route    POST `/api/users`
+            -  @access   Public
+         - Get user profile    
+            -  @desc     GET user profile
+            -  @route    GET `/api/users/profile`
+            -  @access   Private
        ---
    - **Middleware :**
       - Not Found `404`
       - Error Handler
+      - Auth Middleware
 ---
 
 
