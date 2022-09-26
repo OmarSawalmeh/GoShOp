@@ -3,10 +3,10 @@ import { Form, Link, useParams } from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import {Row, Col, Image, ListGroup, Card, Button, FormControl} from 'react-bootstrap'
-import Rating from '../components/Rating'
 // action productDetails
 import { listProductDetails } from '../actions/productActions'
-// components (Loader & Alert)
+// components (Rating, Loader & Alert)
+import Rating from '../components/Rating'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 
@@ -92,6 +92,7 @@ const ProductScreen = () => {
                       </Col>
                       <Col>
                       <FormControl as='select'
+                       style={{backgroundColor: 'gray', color: 'white'}}
                        value={qty}
                         onChange={(e)=> setQty(e.target.value)}>
                           {
