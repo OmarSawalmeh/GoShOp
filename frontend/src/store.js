@@ -23,9 +23,13 @@ const userInfoFromStorge = localStorage.getItem('userInfo')?
 JSON.parse(localStorage.getItem('userInfo'))
 : null
 
+const shippingAddressFromStorge = localStorage.getItem('shippingAddress')
+  ? JSON.parse(localStorage.getItem('shippingAddress'))
+  : {}
+
 const initialState = {
-  cart: { cartItems: cartItemsFromStorge },
-  userLogin: {userInfo: userInfoFromStorge}
+  cart: { cartItems: cartItemsFromStorge, shippingAddress: shippingAddressFromStorge },
+  userLogin: { userInfo: userInfoFromStorge },
 }
 const middleware = [thunk]
 const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(...middleware)))
