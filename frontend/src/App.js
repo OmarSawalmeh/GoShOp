@@ -14,6 +14,7 @@ import LoginScreen from './screen/LoginScreen'
 import RegisterScreen from './screen/RegisterScreen'
 import ProfileScreen from './screen/ProfileScreen'
 import ShippingScreen from './screen/ShippingScreen'
+import PaymentScreen from './screen/PaymentScreen'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
               <Route path='/register' element={<RegisterScreen />} />
               <Route path='/profile' element={<ProfileScreen />} />
               <Route path='/shipping' element={<ShippingScreen />} />
+              <Route path='/payment' element={<PaymentScreen />} />
               <Route path='/product/:id' element={<ProductScreen />} />
               <Route path='/cart/:id' element={<CartScreen />} />
               <Route path='/' element={<HomeScreen />} exact />
