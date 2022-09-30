@@ -1,4 +1,4 @@
-import asyncHandler from 'express-async-handler'
+ import asyncHandler from 'express-async-handler'
 import generateToken from '../utils/generateToken.js'
 import User from '../models/userModel.js'
  
@@ -101,9 +101,14 @@ const updateUserProfile = asyncHandler(async (req, res) => {
    }
 })
 
-export {
-   authUser,
-   registerUser,
-   getUserProfile,
-   updateUserProfile
-}
+
+// @desc     GET all users
+// @route    GET /api/users/
+// @access   Private/admain
+const getUsers = asyncHandler(async (req, res) => {
+   const users = await User.find({})
+   res.json(users)
+})
+
+
+export { authUser, registerUser, getUserProfile, updateUserProfile, getUsers }
