@@ -19,6 +19,8 @@ import PlaceorderSecreen from './screen/PlaceorderSecreen'
 import OrderSecreen from './screen/OrderScreen'
 import UserListScreen from './screen/UserListScreen'
 import UserEditScreen from './screen/UserEditScreen'
+import ProductListScreen from './screen/ProductListScreen'
+import ProductEditScreen from './screen/ProductEditScreen'
 
 const App = () => {
   return (
@@ -28,8 +30,10 @@ const App = () => {
         <main className='py-3'>
           <Container>
             <Routes>
+              {/* Signup && Login */}
               <Route path='/login' element={<LoginScreen />} />
               <Route path='/register' element={<RegisterScreen />} />
+              {/* User Profile, Product, Cart, Order, Shipping && Payment  */}
               <Route path='/profile' element={<ProfileScreen />} />
               <Route path='/shipping' element={<ShippingScreen />} />
               <Route path='/payment' element={<PaymentScreen />} />
@@ -37,8 +41,13 @@ const App = () => {
               <Route path='/order/:id' element={<OrderSecreen />} />
               <Route path='/product/:id' element={<ProductScreen />} />
               <Route path='/cart/:id' element={<CartScreen />} />
+              {/* Admin pages to control Users, Products */}
               <Route path='/admin/userlist' element={<UserListScreen />} />
               <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />
+              <Route path='/admin/productlist' element={<ProductListScreen />} />
+              <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} />
+
+              {/* Home Page */}
               <Route path='/' element={<HomeScreen />} exact />
             </Routes>
           </Container>
