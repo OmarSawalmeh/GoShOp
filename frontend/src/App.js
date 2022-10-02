@@ -6,6 +6,7 @@ import {Container} from 'react-bootstrap'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+
 // screen // pages
 import HomeScreen from './screen/HomeScreen'
 import ProductScreen from './screen/ProductScreen'
@@ -44,8 +45,11 @@ const App = () => {
               {/* Admin pages to control Users, Products */}
               <Route path='/admin/userlist' element={<UserListScreen />} />
               <Route path='/admin/user/:id/edit' element={<UserEditScreen />} />
-              <Route path='/admin/productlist' element={<ProductListScreen />} />
+              <Route path='/admin/productlist' element={<ProductListScreen />} exact/>
               <Route path='/admin/product/:id/edit' element={<ProductEditScreen />} />
+              {/* Pageintation */}
+              <Route path='/page/:pageNumber' element={<HomeScreen />} exact />
+              <Route path='/admin/productlist/:pageNumber' element={<ProductListScreen />} exact/>
 
               {/* Home Page */}
               <Route path='/' element={<HomeScreen />} exact />

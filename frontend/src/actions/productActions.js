@@ -20,10 +20,10 @@ import {
   PRODUCT_CREATE_REVIEW_FAIL,
 } from '../constant/prodcutConstants'
 
-export const listProducts = () => async (dispatch) => {
+export const listProducts = (pageNumber) => async (dispatch) => {
    try {
       dispatch({type: PRODCUT_LIST_REQUEST})
-      const {data} = await axios.get('/api/products')
+      const { data } = await axios.get(`/api/products?pageNumber=${pageNumber}`)
       dispatch({
          type: PRODUCT_LIST_SUCCESS,
          payload: data
